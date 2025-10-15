@@ -1,37 +1,26 @@
-/* Exercise stylesheet for exercises/box-model/index.html */
-
-/* Demonstrate the layered box model */
 .box-layers {
   background-color: #eeeeee;
-  /* final padding shorthand from the exercise */
   padding: 2rem 1rem 4rem 1rem;
-  /* use border-top per the final instruction */
   border-top: 10px solid #dddddd;
-  /* vertical margin only */
   margin: 4rem 0;
   box-sizing: border-box;
 }
 
-/* Contain the h2 margin by adding a border on the parent */
 .h2-wrapper {
   border: 1px solid black;
 }
 
-/* Box-sizing example: show how border-box avoids overflow when width is set */
 .box-sizing-example {
   background-color: #eeeeee;
   padding: 2rem;
   border: 10px solid #dddddd;
-  /* when width is added, use border-box to keep the outer size aligned */
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Overflow example: constrained width and a fixed height to demonstrate overflow behavior */
 .overflow-example {
   width: 50%;
   height: 300px;
-  /* final demonstration uses a scrolling container */
   overflow: auto;
   box-sizing: border-box;
   padding: 1rem;
