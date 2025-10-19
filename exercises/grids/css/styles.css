@@ -1,0 +1,52 @@
+.grid img {
+  max-width: 150px;
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.grid {
+  padding: 0;
+  list-style: none;
+}
+
+.grid li {
+  display: block;
+  width: 25%;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.using-inline-block li {
+  display: inline-block;
+}
+
+.using-inline-block {
+  font-size: 0;
+}
+
+.using-inline-block li div {
+  font-size: 0.8rem;
+}
+
+.using-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.using-flex li {
+  flex: 0 0 25%;
+}
+
+.using-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.using-grid li {
+  width: 100%;
+}
