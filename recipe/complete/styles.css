@@ -1,0 +1,255 @@
+
+body {
+  font-family: 'Comic Neue', cursive, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fff8e1;
+  color: #3a2e2e;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+header.hero {
+  background-color: #ffe0b2;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+}
+
+.hero .hero-content {
+  max-width: 800px;
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+header.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.15));
+  z-index: 1;
+}
+
+.hero h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.hero img {
+  border-radius: 8px;
+  max-width: 420px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.meta p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.ingredients ul {
+  padding-left: 1.2rem;
+  list-style: square;
+}
+
+.instructions li {
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 0;
+}
+
+.instructions ol {
+  counter-reset: step-counter;
+  padding-left: 0;
+}
+
+.instructions li {
+  counter-increment: step-counter;
+}
+
+.instructions li::before {
+  content: "Step " counter(step-counter) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(0.2rem);
+  background: #fff8e1;
+  color: #5d4037;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(16,24,32,0.08);
+  z-index: 3;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 799px) {
+  .instructions li {
+    padding-left: 0;
+  }
+
+  .instructions li::before {
+    position: relative;
+    left: auto;
+    top: auto;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    transform: none;
+  }
+
+  .instructions li .img-grid {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .instructions li {
+    padding-left: 88px;
+  }
+
+  .instructions li::before {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    transform: none;
+  }
+
+}
+
+.instructions h2,
+.ingredients h2 {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  color: #5d4037;
+}
+
+.img-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 0.5rem;
+}
+
+.meta, .ingredients, .instructions {
+  background: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(16,24,32,0.06);
+  margin: 1rem 0;
+}
+
+.meta p, .ingredients ul, .instructions ol { margin: 0.4rem 0; }
+
+.img-grid img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+@media (min-width: 800px) {
+  .instructions li {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .instructions li .img-grid {
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-top: 0;
+  }
+
+  .instructions li .img-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .instructions li > *:not(.img-grid) {
+    flex: 1 1 60%;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffe0b2;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 600px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .meta p {
+    font-size: 1.1rem;
+  }
+
+  .img-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .container {
+    width: 75%;
+    max-width: 1000px;
+  }
+
+  .instructions h2,
+  .ingredients h2 {
+    font-size: 2rem;
+  }
+
+  .img-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .meta p {
+    font-size: 1.2rem;
+  }
+
+  .instructions li {
+    font-size: 1.1rem;
+  }
+
+  .footer {
+    font-size: 1rem;
+  }
+}
+
+header.hero {
+  background-image: url('https://www.resplendentkitchen.com/wp-content/uploads/2024/07/Vegan-Banana-Bread-GF05943-1.jpg');
+}
