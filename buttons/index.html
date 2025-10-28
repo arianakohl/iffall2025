@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Buttons &mdash; James Fawcett</title>
+
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
+
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		
+		<style>
+
+			body {
+				color: #333;
+				font-family: 'Open Sans', sans-serif;
+				margin: 0;
+				padding: 0;
+			}
+
+			main {
+				margin: 40px;
+			}
+
+			h1 {
+			 	font-size: 30px;
+			 	margin-bottom: 40px;
+			}
+
+			.button_container {
+				border: 1px solid #ddd;
+				margin: 0 10px 10px 0;
+				padding: 20px;
+				width: 300px;
+				height: 300px;
+				float: left;
+				overflow: hidden;
+				box-sizing: border-box;
+				text-align: center;
+			}
+
+
+
+			a#btn_spotify {
+				display: inline-block;
+				height: 50px;
+				box-sizing: border-box;
+				border-radius: 25px;
+				margin: auto;
+				margin-top: 100px;
+				padding: 10px 40px 0 40px;
+				background-color: #2ebd59;
+				border: 2px solid #2ebd59;
+				color: #fff;
+				font-size: 20px;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: bold;
+				text-decoration: none;
+				transition: all .5s;
+			}
+
+			a#btn_spotify:hover {
+				background-color: #fff;
+				border: 2px solid #000;
+				color: #000;
+			}
+
+			a#btn_amazon {
+				display: block;
+				width: 100px;
+				height: 100px;
+				box-sizing: border-box;
+				border-radius: 50px;
+				margin: auto;
+				margin-top: 75px;
+				padding-top: 8px;
+				background-color: #232f3e;
+				color: #fff;
+				text-align: center;
+				font-size: 60px;
+				transition: all .2s;
+			}
+
+			a#btn_amazon:hover {
+				background-color: #fc9a18;
+			}
+
+			a#btn_twitter {
+				display: inline-block;
+				height: 40px;
+				box-sizing: border-box;
+				border-radius: 4px;
+				margin: auto;
+				margin-top: 105px;
+				padding: 10px 30px 0 30px;
+				background-color: #56cdf1;
+				color: #fff;
+				font-size: 18px;
+				font-family: 'Arial', sans-serif;
+				font-weight: bold;
+				text-decoration: none;
+			}
+
+			a#btn_twitter:hover {
+
+				/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2ebfec+0,28a5cb+100 */
+				background: rgb(46,191,236); /* Old browsers */
+				background: -moz-linear-gradient(-45deg,  rgba(46,191,236,1) 0%, rgba(40,165,203,1) 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(-45deg,  rgba(46,191,236,1) 0%,rgba(40,165,203,1) 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(135deg,  rgba(46,191,236,1) 0%,rgba(40,165,203,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ebfec', endColorstr='#28a5cb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+			}
+
+			a#btn_indiegogo {
+				display: inline-block;
+				position: relative;
+				margin:auto;
+				margin-top: 100px;
+				padding: 8px 16px;
+				background-color: #fff;
+				color: #eb1478;
+				font-family: 'Ubuntu', sans-serif;
+				font-size: 30px;
+				font-weight: bold;
+				text-transform: uppercase;
+				text-decoration: none;
+				letter-spacing: -2px;
+				transition: all .2s;
+			}
+
+			a#btn_indiegogo:before {
+				content: "";
+				display: block;
+				width: 0;
+				height: 0;
+				z-index: 1;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				background-color: #eb1478;
+				transition: all .5s;
+			}
+
+			a#btn_indiegogo:hover {
+				color: #fff;
+			}
+
+			a#btn_indiegogo:hover:before {
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+			}
+
+			a#btn_indiegogo span {
+				position: relative;
+				z-index: 10;
+			}
+
+			/* Coca-Cola classic pill button */
+			#btn_coca_cola {
+				display: inline-block;
+				position: relative;
+				font-family: 'Montserrat', 'Helvetica', sans-serif;
+				font-weight: 700;
+				color: #fff;
+				text-decoration: none;
+				background: linear-gradient(180deg, #ff485f 0%, #c30f1a 100%);
+				border: 1px solid rgba(0,0,0,0.15);
+				padding: 12px 34px;
+				border-radius: 999px;
+				box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+				text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+				font-size: 18px;
+				line-height: 1;
+				transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+			}
+
+			#btn_coca_cola:focus {
+				outline: 3px solid rgba(255,255,255,0.15);
+				outline-offset: 3px;
+			}
+
+			#btn_coca_cola:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+				background: linear-gradient(180deg, #ff6a78 0%, #d31a24 100%);
+			}
+
+			#btn_coca_cola:active {
+				transform: translateY(0) scale(.995);
+				box-shadow: inset 0 3px 6px rgba(0,0,0,0.25);
+			}
+
+			#btn_coca_cola::after {
+				content: "";
+				position: absolute;
+				left: 8px;
+				right: 8px;
+				top: 6px;
+				height: 45%;
+				background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.08));
+				border-radius: 999px;
+				pointer-events: none;
+				mix-blend-mode: screen;
+				opacity: 0.95;
+				transform: translateY(-2px);
+			}
+
+			/* Apple button: minimal monochrome */
+			#btn_apple {
+				display: inline-block;
+				box-sizing: border-box;
+				width: 140px;
+				height: 48px;
+				margin: auto;
+				margin-top: 100px;
+				padding: 0 18px;
+				background: linear-gradient(180deg, #111111 0%, #000000 100%);
+				color: #fff;
+				text-decoration: none;
+				border-radius: 10px;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 48px;
+				text-align: center;
+				box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+				transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+				position: relative;
+			}
+
+			#btn_apple .fa {
+				margin-right: 8px;
+				vertical-align: middle;
+				font-size: 18px;
+			}
+
+			#btn_apple:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 14px 30px rgba(0,0,0,0.4);
+				background: linear-gradient(180deg, #1b1b1b 0%, #000000 100%);
+			}
+
+			#btn_apple:active {
+				transform: translateY(0) scale(.998);
+				box-shadow: inset 0 3px 8px rgba(0,0,0,0.35);
+			}
+
+			#btn_apple:focus {
+				outline: 3px solid rgba(255,255,255,0.06);
+				outline-offset: 3px;
+			}
+
+			/* Harley-Davidson button: bold black + orange */
+			#btn_harley_davidson {
+				display: inline-block;
+				box-sizing: border-box;
+				width: 160px;
+				height: 52px;
+				margin: auto;
+				margin-top: 70px;
+				padding: 0 18px;
+				background: linear-gradient(180deg,#0d0d0d 0%, #000000 100%);
+				color: #fff;
+				text-decoration: none;
+				border-radius: 6px;
+				border: 2px solid #f36c21; /* Harley orange */
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 800;
+				font-size: 13px;
+				letter-spacing: 0.04em;
+				text-transform: uppercase;
+				line-height: 52px;
+				text-align: center;
+				box-shadow: 0 10px 26px rgba(0,0,0,0.5), inset 0 2px 0 rgba(255,255,255,0.02);
+				transition: transform .14s ease, box-shadow .14s ease, background .14s ease;
+				position: relative;
+			}
+
+			#btn_harley_davidson .fa {
+				margin-right: 10px;
+				vertical-align: middle;
+				font-size: 18px;
+			}
+
+			#btn_harley_davidson:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+				background: linear-gradient(180deg,#151210 0%, #000000 100%);
+			}
+
+			#btn_harley_davidson:active {
+				transform: translateY(0) scale(.996);
+				box-shadow: inset 0 4px 10px rgba(0,0,0,0.6);
+			}
+
+			#btn_harley_davidson:focus {
+				outline: 3px solid rgba(243,108,33,0.12);
+				outline-offset: 3px;
+			}
+
+
+		</style>
+	</head>
+	<body>
+		
+		<main>
+
+			<h1>Button Styling &mdash; Ariana Kohl</h1>
+			
+			<div class="button_container">
+				<a href="http://www.spotify.com" target="_blank" id="btn_spotify">Spotify</a>
+			</div>
+
+			<div class="button_container">
+				<a href="http://www.amazon.com" target="_blank" id="btn_amazon"><i class="fa fa-amazon"></i></a>
+			</div>
+
+			<div class="button_container">
+				<a href="http://www.twitter.com" target="_blank" id="btn_twitter">twitter</a>
+			</div>
+
+			<div class="button_container">
+				<a href="http://www.indiegogo.com" target="_blank" id="btn_indiegogo"><span>indiegogo</span></a>
+			
+            </div>
+            	<div class="button_container">
+				<a href="http://www.coca-cola.com/" target="_blank" id="btn_coca_cola">Coca-Cola</a>
+			</div>
+
+			<div class="button_container">
+				<a href="http://www.apple.com/" target="_blank" id="btn_apple"><i class="fa fa-apple" aria-hidden="true"></i><span class="apple-label">Apple</span></a>
+			</div>
+
+			<div class="button_container">
+				<a href="http://www.harley-davidson.com/" target="_blank" id="btn_harley_davidson"><i class="fa fa-motorcycle" aria-hidden="true"></i><span class="hd-label">Harley‑Davidson</span></a>
+			</div>
+
+            <div class="button_container">
+				<a href="http://sardellastl.com/" target="_blank" id="btn_sardellastl">Sardella's</a>
+			</div>
+
+			<div class="button_container">
+				<a href="http://www.missouribotanicalgarden.org/" target="_blank" id="btn_missouribotanicalgarden">Missouri Botanical Garden</a>
+			</div>
+
+			<div class="button_container">
+				<a href="http://hulkhogan.com/" target="_blank" id="btn_hulkhogan"><span>Hulk Hogan</span></a>
+			</div>
+
+            	<div class="button_container">
+				<a href="http://thecolorrun.com/" target="_blank" id="btn_thecolorrun">The Color Run</a>
+			</div>
+
+            	<div class="button_container">
+				<a href="https://www.pottermore.com/" target="_blank" id="btn_pottermore">Pottermore</a>
+			</div>
+
+			<div class="button_container">
+				<a href="http://www.fitbit.com/home" target="_blank" id="btn_fitbit">Fitbit</a>
+			</div>
+
+			<div class="button_container">
+				<a href="http://www.explodingkittens.com/" target="_blank" id="btn_explodingkittens"><span>Exploding Kittens</span></a>
+			</div>
+
+
+		</main>	
+
+	</body>
+</html>
