@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>16 Personality Types</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <nav class="navbar">
+  <div class="nav-logo">
+    <a href="index.html">
+  <img src="images/logo-16personalities.svg" alt="16Personalities Logo" />
+  </a>
+  </div>
+  <button class="burger" id="burger">&#9776;</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="types.html">Personality Types</a></li>
+  </ul>
+</nav>
+
+
+
+  <section class="types-section">
+    <div class="types-header">
+      <h2>Learn about the<br>16 personality types!</h2>
+      <img src="images/types-hero-mbti.svg" alt="Explorer Character" />
+    </div>
+
+    <div class="types-grid-fixed">
+      <a href="types/intj.html" class="type-box purple">INTJ</a>
+      <a href="types/isfj.html" class="type-box purple">ISFJ</a>
+      <a href="types/infj.html" class="type-box purple">INFJ</a>
+      <a href="types/intj.html" class="type-box purple">INTJ</a>
+
+      <a href="types/istp.html" class="type-box green">ISTP</a>
+      <a href="types/isfp.html" class="type-box green">ISFP</a>
+      <a href="types/infp.html" class="type-box green">INFP</a>
+      <a href="types/intp.html" class="type-box green">INTP</a>
+
+      <a href="types/estp.html" class="type-box yellow">ESTP</a>
+      <a href="types/esfp.html" class="type-box yellow">ESFP</a>
+      <a href="types/enfp.html" class="type-box yellow">ENFP</a>
+      <a href="types/entp.html" class="type-box yellow">ENTP</a>
+
+      <a href="types/estj.html" class="type-box blue">ESTJ</a>
+      <a href="types/esfj.html" class="type-box blue">ESFJ</a>
+      <a href="types/enfj.html" class="type-box blue">ENFJ</a>
+      <a href="types/entj.html" class="type-box blue">ENTJ</a>
+    </div>
+  </section>
+</body>
+
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('navLinks');
+
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+
+</html>
