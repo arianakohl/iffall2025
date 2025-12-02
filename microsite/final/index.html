@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Myers-Briggs Type Indicator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="navbar">
+  <div class="nav-logo">
+  <a href="index.html">
+  <img src="images/logo-16personalities.svg" alt="16Personalities Logo" />
+  </a>
+  </div>
+  <button class="burger" id="burger">&#9776;</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="types.html">Personality Types</a></li>
+  </ul>
+</nav>
+
+
+  <section class="intro">
+    <div class="intro-text">
+      <h1>What is the<br>Myers–Briggs<br>Type Indicator?</h1>
+      <p>The Myers–Briggs Type Indicator (MBTI) is a self-report questionnaire that makes pseudoscientific claims to categorize individuals into 16 distinct "personality types" based on psychology. The test assigns a binary letter value to each of four dichotomous categories: introversion or extraversion, sensing or intuition, thinking or feeling, and judging or perceiving. This produces a four-letter test result such as "INTJ" or "ESFP", representing one of 16 possible types.</p>
+    </div>
+    <div class="intro-image">
+    <img src="images/hero-image-mbti.svg" alt="Hero Illustration" style="width:100%; max-width:600px; height:auto; display:block; margin:0 auto;">
+    </div>
+  </section>
+
+  <section class="pairs-section">
+    <h2>The Four Pairs</h2>
+    <div class="cta-button-wrapper">
+      <a href="types.html" class="cta-button">Explore All 16 Personality Types</a>
+    </div>
+
+    <div class="pairs-grid">
+      <div class="pair-box green">
+        <p>Extraversion vs. Introversion</p>
+        <img src="images/enfp.svg" alt="ENFP Avatar" />
+      </div>
+      <div class="pair-box purple">
+        <p>Sensing vs. Intuition</p>
+        <img src="images/intp.svg" alt="INTP Avatar" />
+      </div>
+      <div class="pair-box yellow">
+        <p>Thinking vs. Feeling</p>
+        <img src="images/isfp.svg" alt="ISFP Avatar" />
+      </div>
+      <div class="pair-box blue">
+        <p>Judging vs. Perceiving</p>
+        <img src="images/isfj.svg" alt="ISFJ Avatar" />
+      </div>
+    </div>
+  </section>
+
+  <section class="history-section">
+  <h2>History</h2>
+
+  <div class="history-block">
+    <h3>Who created the MBTI assessment?</h3>
+    <p>
+      It began with Katharine Cook Briggs and her daughter, Isabel Briggs Myers, in the United States in the early mid-20th century.
+    </p>
+    <p>
+      Briggs was inspired to research personality type theory when she met Isabel’s future husband, Clarence Myers. She noticed he had a different way of seeing the world. This intrigued her enough to start a literature review to understand different temperaments.
+    </p>
+  </div>
+
+  <div class="history-block">
+    <h3>What is Jung’s influence on MBTI theory?</h3>
+    <p>
+      Carl G Jung published <em>Psychological Types</em> in 1921. Briggs read the English translation (1923) and saw similarities between their ideas. However, Jung’s theories of personal difference were much more developed.
+    </p>
+    <p>
+      Briggs and Myers thought Jung’s work was so useful that they wanted to make his ideas accessible to a wider audience.
+    </p>
+  </div>
+
+  <div class="history-block">
+    <h3>When was the MBTI assessment first published?</h3>
+    <p>
+      World War II was a huge influence on the project’s development. Myers believed that if people understood each other better, they’d work together better and there’d be less conflict. The post-war world could be a better place.
+    </p>
+    <p>
+      She was determined to find a way to give people access to their psychological type. This led to the idea of a type indicator, and Myers dedicated the rest of her life to its development.
+    </p>
+    <p>
+      She spent the next 20 years developing questions and validating the instrument and the theory. The MBTI instrument was first published in 1962.
+    </p>
+  </div>
+</section>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.pair-box').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+</body>
+
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('navLinks');
+
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+
+</html>
