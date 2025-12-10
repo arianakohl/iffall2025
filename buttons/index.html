@@ -1,0 +1,675 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Buttons &mdash; Ariana Kohl</title>
+
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
+
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		
+		<style>
+
+			body {
+				color: #333;
+				font-family: 'Open Sans', sans-serif;
+				margin: 0;
+				padding: 0;
+			}
+
+			main {
+				margin: 40px;
+			}
+
+			h1 {
+			 	font-size: 30px;
+			 	margin-bottom: 40px;
+			}
+
+			.button_container {
+				border: 1px solid #ddd;
+				margin: 0 10px 10px 0;
+				padding: 20px;
+				width: 300px;
+				height: 300px;
+				float: left;
+				overflow: hidden;
+				box-sizing: border-box;
+				text-align: center;
+			}
+
+
+
+			a#btn_spotify {
+				display: inline-block;
+				height: 50px;
+				box-sizing: border-box;
+				border-radius: 25px;
+				margin: auto;
+				margin-top: 100px;
+				padding: 10px 40px 0 40px;
+				background-color: #2ebd59;
+				border: 2px solid #2ebd59;
+				color: #fff;
+				font-size: 20px;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: bold;
+				text-decoration: none;
+				transition: all .5s;
+			}
+
+			a#btn_spotify:hover {
+				background-color: #fff;
+				border: 2px solid #000;
+				color: #000;
+			}
+
+			a#btn_amazon {
+				display: block;
+				width: 100px;
+				height: 100px;
+				box-sizing: border-box;
+				border-radius: 50px;
+				margin: auto;
+				margin-top: 75px;
+				padding-top: 8px;
+				background-color: #232f3e;
+				color: #fff;
+				text-align: center;
+				font-size: 60px;
+				transition: all .2s;
+			}
+
+			a#btn_amazon:hover {
+				background-color: #fc9a18;
+			}
+
+			a#btn_twitter {
+				display: inline-block;
+				height: 40px;
+				box-sizing: border-box;
+				border-radius: 4px;
+				margin: auto;
+				margin-top: 105px;
+				padding: 10px 30px 0 30px;
+				background-color: #56cdf1;
+				color: #fff;
+				font-size: 18px;
+				font-family: 'Arial', sans-serif;
+				font-weight: bold;
+				text-decoration: none;
+			}
+
+			a#btn_twitter:hover {
+
+				/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2ebfec+0,28a5cb+100 */
+				background: rgb(46,191,236); /* Old browsers */
+				background: -moz-linear-gradient(-45deg,  rgba(46,191,236,1) 0%, rgba(40,165,203,1) 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(-45deg,  rgba(46,191,236,1) 0%,rgba(40,165,203,1) 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(135deg,  rgba(46,191,236,1) 0%,rgba(40,165,203,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ebfec', endColorstr='#28a5cb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+			}
+
+			a#btn_indiegogo {
+				display: inline-block;
+				position: relative;
+				margin:auto;
+				margin-top: 100px;
+				padding: 8px 16px;
+				background-color: #fff;
+				color: #eb1478;
+				font-family: 'Ubuntu', sans-serif;
+				font-size: 30px;
+				font-weight: bold;
+				text-transform: uppercase;
+				text-decoration: none;
+				letter-spacing: -2px;
+				transition: all .2s;
+			}
+
+			a#btn_indiegogo:before {
+				content: "";
+				display: block;
+				width: 0;
+				height: 0;
+				z-index: 1;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				background-color: #eb1478;
+				transition: all .5s;
+			}
+
+			a#btn_indiegogo:hover {
+				color: #fff;
+			}
+
+			a#btn_indiegogo:hover:before {
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+			}
+
+			a#btn_indiegogo span {
+				position: relative;
+				z-index: 10;
+			}
+			/* coke button */
+			a#btn_cocacola {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			text-align: center;
+			transition: transform 0.2s ease-in-out;
+			}
+
+			a#btn_cocacola:hover {
+			transform: scale(1.05);
+			}
+
+			a#btn_cocacola img {
+			max-height: 100%;
+			max-width: 100%;
+			object-fit: contain;
+			transition: filter 0.2s ease-in-out;
+			}
+
+			a#btn_cocacola:hover img {
+			filter: drop-shadow(0 0 10px rgba(244, 0, 9, 0.5));
+			}
+
+			/* harley button */
+						@keyframes harleyBounce {
+			0% { transform: translateY(0) rotate(0); }
+			30% { transform: translateY(-10px) rotate(-3deg); }
+			50% { transform: translateY(5px) rotate(2deg); }
+			70% { transform: translateY(-6px) rotate(-2deg); }
+			100% { transform: translateY(0) rotate(0); }
+			}
+
+			a#btn_harley img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+			transition: transform 0.3s ease;
+			margin-top: 10px; /* Adjust this value as needed */
+			}
+
+			a#btn_harley {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			text-align: center;
+			}
+
+			a#btn_harley img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+			transition: transform 0.3s ease;
+			}
+
+			a#btn_harley:hover img {
+			animation: harleyBounce 0.6s ease;
+			}
+
+			/* apple button */
+			a#btn_apple {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+			border-radius: 20px;
+			overflow: hidden;
+			}
+
+			a#btn_apple img {
+			max-width: 100px;
+			height: auto;
+			position: absolute;
+			transition: opacity 0.5s ease;
+			}
+
+			a#btn_apple .apple-default {
+			opacity: 1;
+			z-index: 1;
+			}
+
+			a#btn_apple .apple-hover {
+			opacity: 0;
+			z-index: 2;
+			}
+
+			a#btn_apple:hover .apple-default {
+			opacity: 0;
+			}
+
+			a#btn_apple:hover .apple-hover {
+			opacity: 1;
+			}
+
+			/* nike button */
+			a#btn_nike {
+			display: inline-block;
+			position: relative;
+			margin-top: 100px;
+			padding: 16px 32px;
+			background-color: #111;
+			color: #fff;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 22px;
+			font-weight: 800;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			border: none;
+			text-decoration: none;
+			overflow: hidden;
+			transition: color 0.3s ease;
+			}
+
+			a#btn_nike::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: #ff3c00; /* 🚨 New color */
+			z-index: 1;
+			transition: left 0.3s ease;
+			}
+
+			a#btn_nike:hover::before {
+			left: 0;
+			}
+
+			a#btn_nike span {
+			position: relative;
+			z-index: 2;
+			transition: color 0.3s ease;
+			}
+
+			a#btn_nike:hover span {
+			color: #fff;
+			}
+
+			/* pottermore button */
+						@keyframes magicalPulse {
+			0% {
+				box-shadow: 0 0 10px rgba(90, 42, 131, 0.4);
+			}
+			50% {
+				box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+			}
+			100% {
+				box-shadow: 0 0 10px rgba(90, 42, 131, 0.4);
+			}
+			}
+
+			a#btn_pottermore {
+			display: inline-block;
+			margin-top: 100px;
+			padding: 14px 36px;
+			background-color: #5A2A83;
+			color: #f6eec7;
+			font-family: 'Georgia', serif;
+			font-size: 22px;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			border-radius: 12px;
+			border: 2px solid #f6eec7;
+			text-decoration: none;
+			position: relative;
+			transition: all 0.3s ease;
+			}
+
+			a#btn_pottermore:hover {
+			animation: magicalPulse 1s infinite;
+			background-color: #4a1f6d;
+			color: #fffbe6;
+			border-color: gold;
+			}
+
+			/* exploding kittens button */
+		@keyframes explodeShake {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  20%  { transform: translate(-4px, -2px) rotate(-2deg); }
+  40%  { transform: translate(4px, 2px) rotate(2deg); }
+  60%  { transform: translate(-3px, 1px) rotate(-1deg); }
+  80%  { transform: translate(2px, -2px) rotate(1deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+a#btn_kittens {
+  display: inline-block;
+  margin-top: 100px;
+  padding: 16px 24px;
+  background-color: #e60012;
+  color: #fff850;
+  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 12px;
+  border: none;
+
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a#btn_kittens::after {
+  content: '';
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/fire.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+  transition: bottom 0.5s ease, opacity 0.4s ease;
+}
+
+a#btn_kittens span {
+  position: relative;
+  z-index: 1;
+}
+
+a#btn_kittens:hover {
+  animation: explodeShake 0.4s ease-in-out;
+  background-color: #ff0033;
+  color: #fff;
+  border-color: none;
+}
+
+a#btn_kittens:hover::after {
+  bottom: 0;
+  opacity: 1;
+}
+
+/* new yorker */
+a#btn_newyorker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: #111;
+  font-family: 'Georgia', serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid #111;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+}
+
+a#btn_newyorker .text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  transition: width 1.2s steps(20, end);
+  border-right: 2px solid black;
+}
+
+a#btn_newyorker:hover .text {
+  width: 220px; /* Enough to fully reveal "The New Yorker" */
+}
+
+/* hulk hogan */
+a#btn_hulk {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: none; /* ❌ No box */
+  text-decoration: none;
+  overflow: hidden;
+}
+
+a#btn_hulk .text {
+  position: relative;
+  z-index: 1;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 36px;
+  color: #0047AB; /* Strong blue text */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: transform 0.2s ease;
+}
+
+a#btn_hulk .punch {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+a#btn_hulk:hover .punch {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+a#btn_hulk:hover .text {
+  transform: scale(0.95);
+}
+
+/* sardella */
+a#btn_sardella {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fdf9f3; /* creamy white */
+  color: #7B1E3A; /* wine red */
+  font-family: 'Georgia', serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
+}
+
+a#btn_sardella::after {
+  content: '';
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 3px;
+  background-color: #C5B358; /* soft gold */
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+
+a#btn_sardella:hover {
+  color: #C5B358;
+}
+
+a#btn_sardella:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* color run */
+a#btn_colorrun {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
+}
+
+a#btn_colorrun::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    #ff0000, #ffa500, #ffff00, 
+    #00ff00, #0000ff, #4b0082, #ee82ee);
+  z-index: 0;
+  transition: left 0.4s ease;
+}
+
+a#btn_colorrun span {
+  position: relative;
+  z-index: 1;
+}
+
+a#btn_colorrun:hover::before {
+  left: 0;
+}
+
+a#btn_colorrun:hover {
+  color: #fff;
+}
+
+
+
+
+
+
+
+		</style>
+	</head>
+	<body>
+		
+		<main>
+
+			<h1>Button Styling &mdash; Ariana Kohl</h1>
+			
+			<div class="button_container">
+				<a href="http://www.spotify.com" target="_blank" id="btn_spotify">Spotify</a>
+			</div>
+
+			<div class="button_container">
+				<a href="http://www.amazon.com" target="_blank" id="btn_amazon"><i class="fa fa-amazon"></i></a>
+			</div>
+
+			<div class="button_container">
+				<a href="http://www.twitter.com" target="_blank" id="btn_twitter">twitter</a>
+			</div>
+
+			<div class="button_container">
+				<a href="http://www.indiegogo.com" target="_blank" id="btn_indiegogo"><span>indiegogo</span></a>
+			</div>
+
+			<div class="button_container">
+  				<a href="http://www.coca-cola.com/" target="_blank" id="btn_cocacola">
+    			<img src="images/bottle.png" alt="Coca-Cola Bottle" />
+  				</a>
+			</div>
+
+			<div class="button_container">
+  				<a href="http://www.harley-davidson.com/" target="_blank" id="btn_harley">
+    			<img src="images/moto-8.jpg" alt="Harley-Davidson Motorcycle" />
+  				</a>
+			</div>
+
+			<div class="button_container">
+ 				 <a href="http://www.apple.com/" target="_blank" id="btn_apple">
+   				 <img src="images/apple-full.svg" alt="Apple Logo" class="apple-default" />
+    			<img src="images/apple-core.png" alt="Apple Core Logo" class="apple-hover" />
+  				</a>
+			</div>
+
+			<div class="button_container">
+			<a href="http://www.nike.com/us/en_us/" target="_blank" id="btn_nike">
+				<span>Nike</span>
+			</a>
+			</div>
+
+			<div class="button_container">
+			<a href="https://www.pottermore.com/" target="_blank" id="btn_pottermore">
+				<span>Pottermore</span>
+			</a>
+			</div>
+
+			<div class="button_container">
+			<a href="http://www.explodingkittens.com/" target="_blank" id="btn_kittens">
+				<span>Exploding Kittens</span>
+			</a>
+			</div>
+
+			<div class="button_container">
+			<a href="http://www.newyorker.com/" target="_blank" id="btn_newyorker">
+				<span class="text">The New Yorker</span>
+			</a>
+			</div>
+
+			<div class="button_container">
+			<a href="http://hulkhogan.com/" target="_blank" id="btn_hulk">
+				<span class="text">HULK HOGAN</span>
+				<img src="images/punch.png" alt="Punch Fist" class="punch">
+			</a>
+			</div>
+
+			<div class="button_container">
+			<a href="http://sardellastl.com/" target="_blank" id="btn_sardella">
+				<span>Sardella</span>
+			</a>
+			</div>
+
+			<div class="button_container">
+			<a href="https://thecolorrun.com/" target="_blank" id="btn_colorrun">
+				<span>The Color Run</span>
+			</a>
+			</div>
+
+
+
+
+		</main>	
+
+	</body>
+</html>
